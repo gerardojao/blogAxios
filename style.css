@@ -60,7 +60,7 @@ html{
  .principal{
      display:flex;
      justify-content: space-between;
-     align-items: center;
+     align-items: center;margin-top:3.5rem;
  }
  .container__home{
     display:flex;
@@ -81,8 +81,15 @@ img{
  .blog--span{
    padding-left:20px;
 }
+.blog--name{
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration:none;
+    color:#222
+ }
 footer{
-	background: #111;
+	background: #2d3436;
 	padding: 20px 23px;
 	color:#fff;
 	text-align: center;
@@ -122,13 +129,14 @@ footer .rrss a [title]{
     background-color: #dfe6e9;
     border-radius: 40px;
     display: flex;
-    margin:auto;
+   
     align-items: center;
     justify-content: space-around;
     position: relative;
     cursor: pointer;
     overflow: hidden;
     transition: .3 linear;
+    margin: 20px auto;
 }
 
 .share-button span{
