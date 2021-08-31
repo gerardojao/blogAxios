@@ -1,7 +1,11 @@
+
+ 
+
 html{
     box-sizing: border-box;
     font-family: sans-serif;
-    font-size: 1rem;
+    font-size: 16px;
+    scroll-behavior: smooth;
  }
  *,
  *:before,
@@ -13,6 +17,7 @@ html{
      min-height: 100vh;
      display: flex;
      flex-direction:column;
+     font-family:"roboto", sans-serif;
     
  }
  main{
@@ -63,20 +68,34 @@ html{
      align-items: center;margin-top:3.5rem;
  }
  .container__home{
-    display:flex;
-    align-items: center;
-    flex-direction: row;
+    display:grid;
+     grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+     grid-gap:10px;
+    
 }
-img{
-    width: 300px;
+
+
+.icon-X1{
+    max-width: 80%;
     height: auto;
+    border-radius: 10px;
+    margin:auto;
 }
 
  .blog{
      text-align: justify;
  }
  .blog__title{
-     margin-top: 3.2rem;
+     margin-top: 3rem;
+     font-size:2.5rem;
+     font-weight: 900;
+ }
+ .blog__title--blog{
+    font-size:2.5rem;
+ }
+ .blog__subtitle{
+    font-size:1.2rem;
+    text-align: justify;
  }
  .blog--span{
    padding-left:20px;
@@ -93,7 +112,7 @@ footer{
 	padding: 20px 23px;
 	color:#fff;
 	text-align: center;
-
+    width: 100%;
 
 }
 footer .name{
@@ -113,6 +132,7 @@ footer .rrss a{
 	padding:20px;
 	
 }
+
 footer .rrss a [title]{
 	
 	color:#fff;
@@ -120,7 +140,6 @@ footer .rrss a [title]{
 	
 	
 }
-
 
 /* share button */
 .share-button{
@@ -183,3 +202,105 @@ footer .rrss a [title]{
 .share-button a:nth-of-type(3){
     transition-delay:.6s;
 }
+
+/* blog */
+
+.blog-item {
+    border: thin solid transparent;
+    border-bottom-color:lightgray;
+    display: flex;
+    font-size: 1.5rem;
+    font-weight: 900;
+    text-decoration: none;
+    color: #222;
+    width: 100%;
+  
+}
+
+.blog-item:hover {
+    background-color: lightgray;
+    opacity: 1;
+  } 
+  
+  .blog-item figure {
+    width: 100%;
+    display: flex;
+ 
+ 
+  }
+  
+  .blog-item figcaption {
+    margin-left: 1rem;
+    display: flex;
+   
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .blog-item span{
+    width: 100%;
+  }
+  
+  .blog-item time {
+    font-weight: 400;
+    font-size: 80%;
+    width: 30%;
+  }
+  .icon-x3{
+    width: 60px;
+    height: auto;
+}
+
+@media screen and (max-width: 410px) {
+    .blog-item  {
+        width: 100%;
+       
+      }
+    .blog-item span {
+      width: 100%;
+      font-size:1rem;
+    }
+  
+    .blog-item time {
+      width: 100%;
+      text-align: left;
+      font-size:.8rem;
+    }
+    .blog-item figcaption {
+        margin-left: .5rem;
+        display: flex;
+       flex-direction:column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+      }
+  }
+
+    
+.dark-theme-btn{
+    position: fixed;
+    z-index: 999;
+    bottom: 1vh;
+    width: 4rem;
+    height: 4rem;
+    left: 1vw;
+    background-color: #dfe6e9;
+    border-radius: 50%;
+    font-size:2rem;
+    font-weight: bold;
+    border:none;
+    cursor: pointer;
+    transition: all .3s ease;
+    
+   
+}
+.dark-theme-btn:hover{
+    background-color: #222;
+    color:#dfe6e9
+}
+.dark-mode{
+    background-color: #222;
+    color:#dfe6e9;
+}
+   
