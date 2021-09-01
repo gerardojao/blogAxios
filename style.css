@@ -24,6 +24,7 @@ html{
      flex-grow: 1;
      margin-top:20px;
      padding:20px;
+    
  }
  .container{
      margin-left: auto;
@@ -45,7 +46,7 @@ html{
    
  }
  .logo img{
-     width: 15rem;
+    width: 10rem;
     height: 60px;
      margin-top:10px;
  }
@@ -59,7 +60,7 @@ html{
      padding: 0 1.5vw;
      transition: all .3s ease-in-out; 
      text-decoration: none;
-     margin-right:20px;
+     margin-right:10px;
  }
  .menu__link:hover{
      opacity: .50;
@@ -291,7 +292,7 @@ footer .rrss a [title]{
     height: 64px;
 }
 
-@media screen and (max-width: 410px) {
+@media screen and (max-width: 430px) {
     .principal h1{
         font-size:1.5rem;
     }
