@@ -105,7 +105,10 @@ html{
     font-weight: bold;
     cursor: pointer;
     text-decoration:none;
-    color:#222
+    color:crimson
+ }
+ .blog--link{
+     text-decoration: none;
  }
 footer{
 	background: #2d3436;
@@ -113,6 +116,7 @@ footer{
 	color:#fff;
 	text-align: center;
     width: 100%;
+    max-width: 992px;;
 
 }
 footer .name{
@@ -204,6 +208,14 @@ footer .rrss a [title]{
 }
 
 /* blog */
+.blog{
+    line-height: 1.5rem;;
+}
+.interrogante{
+    padding-left:10px;
+    float:right;
+  max-width: 150px;;
+}
 
 .blog-item {
     border: thin solid transparent;
@@ -284,7 +296,7 @@ footer .rrss a [title]{
     bottom: 1vh;
     width: 4rem;
     height: 4rem;
-    left: 1vw;
+    right: 1vw;
     background-color: #dfe6e9;
     border-radius: 50%;
     font-size:2rem;
