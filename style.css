@@ -41,11 +41,13 @@ html{
      display:flex;
      justify-content: space-between;
      align-items: center;
+     height: 40px;
    
  }
  .logo img{
-     width: 4.5rem;
-     height: auto;
+     width: 15rem;
+    height: 60px;
+     margin-top:10px;
  }
  .menu{
      display:flex;
@@ -54,9 +56,10 @@ html{
  }
  .menu__link{
      color:#fff;
-     padding: 0 1vw;
+     padding: 0 1.5vw;
      transition: all .3s ease-in-out; 
      text-decoration: none;
+     margin-right:20px;
  }
  .menu__link:hover{
      opacity: .50;
@@ -66,6 +69,9 @@ html{
      display:flex;
      justify-content: space-between;
      align-items: center;margin-top:3.5rem;
+ }
+ .principal h1{
+     font-size:2.5rem;
  }
  .container__home{
     display:grid;
@@ -84,14 +90,17 @@ html{
 
  .blog{
      text-align: justify;
+    
  }
  .blog__title{
-     margin-top: 3rem;
+     margin-top: 2rem;
      font-size:2.5rem;
      font-weight: 900;
  }
  .blog__title--blog{
     font-size:2.5rem;
+    font-weight: 900;
+    margin-top:1rem;
  }
  .blog__subtitle{
     font-size:1.2rem;
@@ -99,16 +108,28 @@ html{
  }
  .blog--span{
    padding-left:20px;
+
 }
 .blog--name{
     font-size: 1.1rem;
     font-weight: bold;
     cursor: pointer;
     text-decoration:none;
-    color:crimson
+    color:crimson;
+    font-weight: 900;;
  }
  .blog--link{
      text-decoration: none;
+     color: crimson;
+     font-weight: 900;;
+ }
+ .blog--img{
+
+     
+    float:left;
+    width:300px;
+     height:150px;
+   
  }
 footer{
 	background: #2d3436;
@@ -226,12 +247,16 @@ footer .rrss a [title]{
     text-decoration: none;
     color: #222;
     width: 100%;
-  
+    background-color: lightgray;
+    opacity: 1;
+    border-radius:50px;  
+    height: 80px;
+    align-items: center;
 }
-
 .blog-item:hover {
     background-color: lightgray;
     opacity: 1;
+    border-radius:50px;
   } 
   
   .blog-item figure {
@@ -261,10 +286,13 @@ footer .rrss a [title]{
   }
   .icon-x3{
     width: 60px;
-    height: auto;
+    height: 64px;
 }
 
 @media screen and (max-width: 410px) {
+    .principal h1{
+        font-size:1.5rem;
+    }
     .blog-item  {
         width: 100%;
        

@@ -1,5 +1,8 @@
 const d = document,
-$main = d.querySelector("main");
+$main = d.querySelector("main"),
+blogItem=d.getElementById("blog-item");
+
+console.log(blogItem);
 
 const getHTML = (options)=>{
     let{url,success,error}=options;//destructuracion
@@ -11,7 +14,7 @@ const getHTML = (options)=>{
         if(xhr.status>=200 && xhr.status<300){
             //responseText nos devuelve el contenido
             let html = xhr.responseText;
-            console.log(html);
+           
             success(html);
         }else{
             let msg =  `Ocurrio un Error`;
@@ -32,7 +35,7 @@ d.addEventListener("DOMContentLoaded",()=>{
         success:(html)=>$main.innerHTML =html,
         error:(err)=>$main.innerHTML = `<h1>${err}</h1>`
     })
-    console.log(html);
+   
 })
 
 d.addEventListener("click",e=>{
