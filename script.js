@@ -28,7 +28,7 @@ const getHTML = (options)=>{
 }
 d.addEventListener("DOMContentLoaded",()=>{
     getHTML({
-        url:"assets/Blog.html",
+        url:"assets/home.html",
         success:(html)=>$main.innerHTML =html,
         error:(err)=>$main.innerHTML = `<h1>${err}</h1>`
     })
