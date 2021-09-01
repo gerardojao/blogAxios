@@ -1,8 +1,5 @@
 const d = document,
-$main = d.querySelector("main"),
-blogItem=d.getElementById("blog-item");
-
-console.log(blogItem);
+$main = d.querySelector("main");
 
 const getHTML = (options)=>{
     let{url,success,error}=options;//destructuracion
