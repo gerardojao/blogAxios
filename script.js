@@ -39,8 +39,7 @@ d.addEventListener("DOMContentLoaded",()=>{
 d.addEventListener("click",e=>{
    if(e.target.matches(".menu__link")||e.target.matches(".blog-item")){
     e.preventDefault()
-    console.log(e.target)
-    alert("click")
+  
     getHTML({
         url:e.target.href,
         success:(html)=>$main.innerHTML =html,
