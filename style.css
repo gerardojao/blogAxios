@@ -127,11 +127,10 @@ html{
      font-weight: 900;;
  }
  .blog--img{
-
-     
+   
     float:left;
-    width:300px;
-     height:150px;
+    width:150px;
+    height:100px;
    
  }
 footer{
@@ -146,6 +145,7 @@ footer{
 footer .name{
 	color:crimson;
 	font-size: 20px;
+    text-decoration:none;
 }
 footer .rsss{
 margin-bottom:10px;
@@ -176,7 +176,7 @@ footer .rrss a [title]{
     background-color: #dfe6e9;
     border-radius: 40px;
     display: flex;
-   
+    border:none;
     align-items: center;
     justify-content: space-around;
     position: relative;
@@ -199,7 +199,8 @@ footer .rrss a [title]{
     z-index:999;
     transition: .6s linear;
     border-radius: 40px;
-    
+   
+ 
 }
 .share-button span i{
     padding:10px;
@@ -229,6 +230,13 @@ footer .rrss a [title]{
 }
 .share-button a:nth-of-type(3){
     transition-delay:.6s;
+}
+.share-button a:nth-of-type(4){
+    transition-delay:.4s;
+}
+.share-button a i:hover{
+    color:crimson;
+    transform:scale(1.2)
 }
 
 /* blog */
@@ -295,6 +303,9 @@ footer .rrss a [title]{
 @media screen and (max-width: 430px) {
     .principal h1{
         font-size:1.5rem;
+    }
+    .blog{
+        width: 98%;
     }
     .blog-item  {
         width: 100%;
