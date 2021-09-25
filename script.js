@@ -1,30 +1,20 @@
 const d = document,
-$main = d.querySelector("main");
+$main = d.getElementById("axios")
 
 const getHTML = (options)=>{
     let{url,success,error}=options;//destructuracion
-    let xhr = new XMLHttpRequest();
-
-    xhr.addEventListener("readystatechange",()=>{
-        if(xhr.readyState!==4)return;
-
-        if(xhr.status>=200 && xhr.status<300){
-            //responseText nos devuelve el contenido
-            let html = xhr.responseText;
-            success(html);
-        }else{
-            let msg =  `Ocurrio un Error`;
-            error(`Error ${xhr.status}: ${msg}`)
-
-        }
+    
+    axios
+    .get(url)
+    .then(res=>{
+        let html=res.data
+        success(html);
     })
-    xhr.open("GET",url);
-
-    //establecemos una cabecera por este metodo:
-    xhr.setRequestHeader("Content-type", "text/html; charset=utf-8")
-
-    xhr.send()
-
+    .catch((err) => {
+        console.log(err.response);
+        let message = err.response.statusText || "Ocurrió un error";
+        $main.innerHTML = `Error ${err.response.status}: ${message}`;
+    })
 }
 d.addEventListener("DOMContentLoaded",()=>{
     getHTML({

@@ -3,22 +3,16 @@
 
 document.addEventListener("DOMContentLoaded", ()=>{
     const includeHTML = (el, url)=>{
-        const xhr = new XMLHttpRequest();
-
-    xhr.addEventListener("readystatechange",()=>{
-        if (xhr.readyState!==4)return;
-
-        if (xhr.status>=200&&xhr.status<300) {
-           el.outerHTML = xhr.responseText;
-       } else {
-           let msg = "Verifica que estes haciendo la peticion por http o https"
-           el.outerHTML = `<div><p>Error ${xhr.status}: ${msg}</p></div>`
-       } 
-    });
-
-    xhr.open("GET",url)
-    xhr.setRequestHeader("Content-type","text/html; charset = utf-8")
-    xhr.send()
+        axios
+        .get(url)
+        .then(res=>{
+            el.outerHTML=res.data;
+        })
+        .catch(err => {
+            console.log(err.response);
+            let message = err.response.statusText || "Ocurrió un error";
+            el.outerHTML = `Error ${err.response.status}: ${message}`;
+        })
     }
 
 /* Con esto accedo a los elementos con el atributo data-include */

@@ -139,7 +139,7 @@ footer{
 	color:#fff;
 	text-align: center;
     width: 100%;
-    max-width: 992px;;
+    min-width: 100%;
 
 }
 footer .name{
@@ -299,6 +299,12 @@ footer .rrss a [title]{
     width: 60px;
     height: 64px;
 }
+.blog-item a{
+    width: 100%;
+    text-decoration:none;
+    color:#222;
+  }
+
 
 @media screen and (max-width: 430px) {
     .principal h1{
@@ -357,4 +363,6 @@ footer .rrss a [title]{
     background-color: #222;
     color:#dfe6e9;
 }
+
+
    
